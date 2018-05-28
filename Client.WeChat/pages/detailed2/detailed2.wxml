@@ -1,0 +1,31 @@
+<view class="header">
+  <!-- <text class="new-todo1">寻找老人</text> -->
+    <image src="{{Person.FilePaths}}" mode="aspecFill" style="width: 100%; height: 450rpx"/>
+    <text>简介：{{ Person.input }}</text>
+
+    <block wx:if="{{Person.isLike == 0}}">
+      <button style="margin:30rpx;" bindtap="FindPerson" data-id="{{Person.id}}">我已帮忙找到宠物</button> 
+    </block>
+    <block wx:else>
+        <button style="margin:30rpx;" disabled='true'>宠物已找到感谢您的帮助</button> 
+    </block>
+    <!-- <textarea id="newtodo" class="new-todo" value="{{ Person.input }}"></textarea> -->
+    <!-- <button type="default"bindtap="onBtnClick">返回</button> -->
+    <!-- <scroll-view scroll-y="true" style="height: 200rpx;">
+    <view class="item" wx:for="{{ lylist }}" wx:key="{{ index }}"  data-index="{{ index }}">
+    </view>
+    </scroll-view> -->
+</view>
+<view class="container">
+    <scroll-view scroll-y="true">
+       <view class="item" wx:for="{{ lylist }}" wx:key="{{ index }}"  data-index="{{ index }}">
+          <text>{{item.user}}评论了：{{item.input}}（{{item.time}}）</text>
+      </view>
+    </scroll-view> 
+</view>
+<view class="footer">
+    <label class="headerInner" for="pltodo">
+      <input name="pltodo" id="pltodo" class="new-todo" value="{{ input }}" bindinput="inputChangeHandle" placeholder="添加评论..."/>
+    <button type="default" class= "btn" bindtap="addTodoHandle" data-id="{{Person.id}}" >添加评论</button>
+    </label>
+  </view>

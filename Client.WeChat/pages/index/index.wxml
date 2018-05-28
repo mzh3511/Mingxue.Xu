@@ -1,0 +1,21 @@
+<view class="header">
+  <!-- <text class="new-todo1">寻找老人</text> -->
+  <block wx:if="!{{tempFilePaths}}">
+    <image src="{{tempFilePaths}}" mode="aspecFill" style="width: 100%; height: 450rpx"/>
+    <text>{{type == 1 ? '救助站电话：0101-0102030405' : ''}}</text>
+    <button style="margin:30rpx;" bindtap="chooseimage">上传图片</button> 
+    <text>简介：</text>
+    <!-- <input name="newtodo" id="newtodo" class="new-todo" value="{{ input }}" placeholder="添加详细..."/> -->
+    <textarea id="newtodo" class="new-todo" value="{{ tito }}" placeholder="添加简介..." bindinput="inputChangeHandle"></textarea>
+    <text>详情：</text>
+    <!-- <input name="newtodo" id="newtodo" class="new-todo" value="{{ input }}" placeholder="添加详细..."/> -->
+    <textarea id="newtodo" class="new-todo" value="{{ input }}" placeholder="添加详情..." bindinput="inputChangeHandle2"></textarea>
+    <button style='width:100%;position:fixed; bottom:0; ' bindtap="addTodoHandle">提交</button> 
+   
+  </block>
+   <!-- <view class="item" wx:for="{{ list }}" wx:key="{{ index }}" bindtap="toggleTodoHandle" data-index="{{ index }}">
+        <icon class="checkbox" color="#6c6" type="{{ item.completed ? 'success' : 'circle' }}"/>
+        <text class="name">{{item.id}} -- {{ item.input}}</text>
+        <icon class="remove" type="clear" color="#ccc" catchtap="removeTodoHandle" data-index="{{ index }}"/>
+    </view> -->
+</view>

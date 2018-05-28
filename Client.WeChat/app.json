@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/main/Main",
+    "pages/index/index",
+    "pages/detailed/detailed",
+    "pages/main2/Main2",
+    "pages/index2/index2",
+    "pages/detailed2/detailed2",
+    "pages/main3/Main3",
+    "pages/index3/index3",
+    "pages/detailed3/detailed3"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#096",
+    "navigationBarTitleText": "让爱回家，让家完整",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false,
+    "backgroundColor": "#f2f2f2"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#096",
+    "backgroundColor": "#f6f6f6",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/main/Main",
+        "text": "老人回家",
+        "iconPath": "assets/image/icons/index.png",
+        "selectedIconPath": "assets/image/icons/indexed.png"
+      },
+      {
+        "pagePath": "pages/main3/Main3",
+        "text": "在路上",
+        "iconPath": "assets/image/icons/index.png",
+        "selectedIconPath": "assets/image/icons/indexed.png"
+      },
+      {
+        "pagePath": "pages/main2/Main2",
+        "text": "宠物回家",
+        "iconPath": "assets/image/icons/rank.png",
+        "selectedIconPath": "assets/image/icons/ranked.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

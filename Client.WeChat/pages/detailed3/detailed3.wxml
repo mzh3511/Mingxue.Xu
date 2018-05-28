@@ -1,0 +1,27 @@
+<view class="header">
+  <!-- <text class="new-todo1">寻找老人</text> -->
+
+    <text>标题：{{ Person.tito }}</text>
+</view>
+<view class="header">
+    <text>详情：{{ Person.input }}</text>
+    <!-- <textarea id="newtodo" class="new-todo" value="{{ Person.input }}"></textarea> -->
+    <!-- <button type="default"bindtap="onBtnClick">返回</button> -->
+    <!-- <scroll-view scroll-y="true" style="height: 200rpx;">
+    <view class="item" wx:for="{{ lylist }}" wx:key="{{ index }}"  data-index="{{ index }}">
+    </view>
+    </scroll-view> -->
+</view>
+<view class="container">
+    <scroll-view scroll-y="true">
+       <view class="item" wx:for="{{ lylist }}" wx:key="{{ index }}"  data-index="{{ index }}">
+          <text>{{item.user}}评论了：{{item.input}}（{{item.time}}）</text>
+      </view>
+    </scroll-view> 
+</view>
+<view class="footer">
+    <label class="headerInner" for="pltodo">
+      <input name="pltodo" id="pltodo" class="new-todo" value="{{ input }}" bindinput="inputChangeHandle" placeholder="添加评论..."/>
+    <button type="default" class= "btn" bindtap="addTodoHandle" data-id="{{Person.id}}" >添加评论</button>
+    </label>
+  </view>
